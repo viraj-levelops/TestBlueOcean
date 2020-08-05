@@ -24,6 +24,7 @@ pipeline {
         if(n % 10 == 0){
           error("Unit Tests Failed")
         }
+      }
     }
 
     stage('Package') {
