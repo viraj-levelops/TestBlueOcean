@@ -7,9 +7,10 @@ pipeline {
         script {
             Random rnd = new Random()
             env.N = rnd.nextInt(10)
+            env.D = new Integer(10)
             println(env.N)
             sleep(env.N)
-            if(env.N % 10 == 0){
+            if(env.N % env.D == 0){
               error("Build Failed")
             }
         }
@@ -24,7 +25,7 @@ pipeline {
         env.N = rnd.nextInt(10)
         println(env.N)
         sleep(env.N)
-        if(env.N % 10 == 0){
+        if(env.N % env.D == 0){
           error("Unit Tests Failed")
         }
         }
@@ -39,7 +40,7 @@ pipeline {
         env.N = rnd.nextInt(10)
         println(env.N)
         sleep(env.N)
-        if(env.N % 10 == 0){
+        if(env.N % env.D == 0){
           error("Package Failed")
         }
         }
@@ -56,7 +57,7 @@ pipeline {
             env.N = rnd.nextInt(10)
             println(env.N)
             sleep(env.N)
-            if(env.N % 10 == 0){
+            if(env.N % env.D == 0){
               error("Deploy Stg1 Failed")
             }
             }
@@ -71,7 +72,7 @@ pipeline {
             env.N = rnd.nextInt(10)
             println(env.N)
             sleep(env.N)
-            if(env.N % 10 == 0){
+            if(env.N % env.D == 0){
               error("Deploy Stg2 Failed")
             }
             }
@@ -86,7 +87,7 @@ pipeline {
             env.N = rnd.nextInt(10)
             println(env.N)
             sleep(env.N)
-            if(env.N % 10 == 0){
+            if(env.N % env.D == 0){
               error("Deploy Stg3 Failed")
             }
             }
@@ -104,7 +105,7 @@ pipeline {
         env.N = rnd.nextInt(10)
         println(env.N)
         sleep(env.N)
-        if(env.N % 10 == 0){
+        if(env.N % env.D == 0){
           error("Deploy Prod Failed")
         }
         }
