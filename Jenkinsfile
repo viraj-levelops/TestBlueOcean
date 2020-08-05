@@ -1,15 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Allocate Node') {
-      steps {
-        node(label: 'Allocate Node') {
-          echo 'Checkout'
-        }
-
-      }
-    }
-
     stage('Build') {
       steps {
         echo 'Build'
