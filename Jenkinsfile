@@ -6,10 +6,10 @@ pipeline {
         echo 'Build'
         script {
             Random rnd = new Random()
-            var n = rnd.nextInt(10)
-            println(n)
-            sleep(n)
-            if(n % 10 == 0){
+            env.N = rnd.nextInt(10)
+            println(env.N)
+            sleep(env.N)
+            if(env.N % 10 == 0){
               error("Build Failed")
             }
         }
@@ -21,10 +21,10 @@ pipeline {
         echo 'Unit Tests'
         script {
         Random rnd = new Random()
-        var n = rnd.nextInt(10)
-        println(n)
-        sleep(n)
-        if(n % 10 == 0){
+        env.N = rnd.nextInt(10)
+        println(env.N)
+        sleep(env.N)
+        if(env.N % 10 == 0){
           error("Unit Tests Failed")
         }
         }
@@ -36,10 +36,10 @@ pipeline {
         echo 'Package'
         script {
         Random rnd = new Random()
-        var n = rnd.nextInt(10)
-        println(n)
-        sleep(n)
-        if(n % 10 == 0){
+        env.N = rnd.nextInt(10)
+        println(env.N)
+        sleep(env.N)
+        if(env.N % 10 == 0){
           error("Package Failed")
         }
         }
@@ -53,10 +53,10 @@ pipeline {
             echo 'Deploy Stg1'
             script {
             Random rnd = new Random()
-            var n = rnd.nextInt(10)
-            println(n)
-            sleep(n)
-            if(n % 10 == 0){
+            env.N = rnd.nextInt(10)
+            println(env.N)
+            sleep(env.N)
+            if(env.N % 10 == 0){
               error("Deploy Stg1 Failed")
             }
             }
@@ -68,10 +68,10 @@ pipeline {
             echo 'Deploy Stg2'
             script {
             Random rnd = new Random()
-            var n = rnd.nextInt(10)
-            println(n)
-            sleep(n)
-            if(n % 10 == 0){
+            env.N = rnd.nextInt(10)
+            println(env.N)
+            sleep(env.N)
+            if(env.N % 10 == 0){
               error("Deploy Stg2 Failed")
             }
             }
@@ -83,10 +83,10 @@ pipeline {
             echo 'Deploy Stg3'
             script {
             Random rnd = new Random()
-            var n = rnd.nextInt(10)
-            println(n)
-            sleep(n)
-            if(n % 10 == 0){
+            env.N = rnd.nextInt(10)
+            println(env.N)
+            sleep(env.N)
+            if(env.N % 10 == 0){
               error("Deploy Stg3 Failed")
             }
             }
@@ -101,10 +101,10 @@ pipeline {
         echo 'Deploy Prod'
         script {
         Random rnd = new Random()
-        var n = rnd.nextInt(10)
-        println(n)
-        sleep(n)
-        if(n % 10 == 0){
+        env.N = rnd.nextInt(10)
+        println(env.N)
+        sleep(env.N)
+        if(env.N % 10 == 0){
           error("Deploy Prod Failed")
         }
         }
