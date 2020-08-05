@@ -1,10 +1,10 @@
 pipeline {
-  Random rnd = new Random()
   agent any
   stages {
     stage('Build') {
       steps {
         echo 'Build'
+        Random rnd = new Random()
         var n = rnd.nextInt(10)
         println(n)
         sleep(n)
@@ -17,6 +17,7 @@ pipeline {
     stage('Unit Tests') {
       steps {
         echo 'Unit Tests'
+        Random rnd = new Random()
         var n = rnd.nextInt(10)
         println(n)
         sleep(n)
@@ -28,6 +29,7 @@ pipeline {
     stage('Package') {
       steps {
         echo 'Package'
+        Random rnd = new Random()
         var n = rnd.nextInt(10)
         println(n)
         sleep(n)
@@ -42,6 +44,7 @@ pipeline {
         stage('Deploy Stg1') {
           steps {
             echo 'Deploy Stg1'
+            Random rnd = new Random()
             var n = rnd.nextInt(10)
             println(n)
             sleep(n)
@@ -54,6 +57,7 @@ pipeline {
         stage('Deploy Stg2') {
           steps {
             echo 'Deploy Stg2'
+            Random rnd = new Random()
             var n = rnd.nextInt(10)
             println(n)
             sleep(n)
@@ -66,6 +70,7 @@ pipeline {
         stage('Deploy Stg3') {
           steps {
             echo 'Deploy Stg3'
+            Random rnd = new Random()
             var n = rnd.nextInt(10)
             println(n)
             sleep(n)
@@ -81,6 +86,7 @@ pipeline {
     stage('Deploy Prod') {
       steps {
         echo 'Deploy Prod'
+        Random rnd = new Random()
         var n = rnd.nextInt(10)
         println(n)
         sleep(n)
