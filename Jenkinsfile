@@ -7,8 +7,14 @@ pipeline {
         script {
             Random rnd = new Random()
             env.N = rnd.nextInt(10)
-            env.D = new Integer(10)
             println(env.N)
+
+            env.D = 10
+            println(env.D.getClass())
+
+            def d = 10
+            println(d.getClass())
+
             sleep(env.N)
             if(env.N % env.D == 0){
               error("Build Failed")
