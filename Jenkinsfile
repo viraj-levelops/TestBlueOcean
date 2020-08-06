@@ -28,8 +28,13 @@ pipeline {
         Random rnd = new Random()
         def n = rnd.nextInt(10)
         println(n)
+        println(n.getClass())
+
+        def d = 10
+        println(d.getClass())
+
         sleep(n)
-        if(n % env.D == 0){
+        if(n % d == 0){
           error("Unit Tests Failed")
         }
         }
@@ -43,8 +48,13 @@ pipeline {
         Random rnd = new Random()
         def n = rnd.nextInt(10)
         println(n)
+        println(n.getClass())
+
+        def d = 10
+        println(d.getClass())
+
         sleep(n)
-        if(n % env.D == 0){
+        if(n % d == 0){
           error("Package Failed")
         }
         }
@@ -60,8 +70,13 @@ pipeline {
             Random rnd = new Random()
             def n = rnd.nextInt(10)
             println(n)
+            println(n.getClass())
+
+            def d = 10
+            println(d.getClass())
+
             sleep(n)
-            if(n % env.D == 0){
+            if(n % d == 0){
               error("Deploy Stg1 Failed")
             }
             }
@@ -75,8 +90,13 @@ pipeline {
             Random rnd = new Random()
             def n = rnd.nextInt(10)
             println(n)
+            println(n.getClass())
+
+            def d = 10
+            println(d.getClass())
+
             sleep(n)
-            if(n % env.D == 0){
+            if(n % d == 0){
               error("Deploy Stg2 Failed")
             }
             }
@@ -90,8 +110,13 @@ pipeline {
             Random rnd = new Random()
             def n = rnd.nextInt(10)
             println(n)
+            println(n.getClass())
+
+            def d = 10
+            println(d.getClass())
+
             sleep(n)
-            if(n % env.D == 0){
+            if(n % d == 0){
               error("Deploy Stg3 Failed")
             }
             }
@@ -108,8 +133,13 @@ pipeline {
         Random rnd = new Random()
         def n = rnd.nextInt(10)
         println(n)
+        println(n.getClass())
+
+        def d = 10
+        println(d.getClass())
+
         sleep(n)
-        if(n % env.D == 0){
+        if(n % d == 0){
           error("Deploy Prod Failed")
         }
         }
