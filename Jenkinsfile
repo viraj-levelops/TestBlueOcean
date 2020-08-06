@@ -8,18 +8,13 @@ pipeline {
             Random rnd = new Random()
             env.N = rnd.nextInt(10)
             println(env.N)
-
-            env.D = 10
-            println(env.D.getClass())
+            println(env.N.getClass())
 
             def d = 10
-            println(d.getClass() )
-            
-            env.D = d
-            println(env.D.getClass())
+            println(d.getClass())
 
             sleep(env.N)
-            if(env.N % env.D == 0){
+            if(env.N % d == 0){
               error("Build Failed")
             }
         }
