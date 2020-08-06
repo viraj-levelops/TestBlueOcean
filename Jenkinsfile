@@ -13,7 +13,10 @@ pipeline {
             println(env.D.getClass())
 
             def d = 10
-            println(d.getClass())
+            println(d.getClass() )
+            
+            env.D = d
+            println(env.D.getClass())
 
             sleep(env.N)
             if(env.N % env.D == 0){
