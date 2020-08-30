@@ -10,7 +10,7 @@ pipeline {
             println(n)
             println(n.getClass())
 
-            for(int i=0; i< 1000000; i++) {
+            for(int i=0; i< 500; i++) {
                 n = rnd.nextInt(10)
                 println(n)
                 println(n.getClass())
